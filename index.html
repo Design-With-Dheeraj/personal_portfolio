@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title id="page-title">Hey viewer👀, It's me Dheeraj Kumar Yadav👋! Welcome to my Portfolio----------</title>
+
+	<!-- Website Icon Code -->
+	<link rel="icon" href="img/Rectangle.png" type="image/png">
+
+	<!-- Style Sheet Link -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Responsive Media Link -->
+	<link rel="stylesheet" type="text/css" href="media.css">
+
+	<!-- Animate On Scroll (AOS) -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!-- JavaScript Link -->
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<!-- Fontawesome Link -->
+	<script src="https://kit.fontawesome.com/a656fffa44.js" crossorigin="anonymous"></script>
+
+	<!-- Vanilla Tilt JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.babel.min.js" integrity="sha512-pN0rCYHGZjfGs3iKHAxWykf8jcueAPyjCgWQRT2n9EOfAKCsKS5rqPHLM4GqqI8Q1JQxQfkeeslsULidJbBk/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body onload="moveTitle()">
+
+	<div class="container">
+		<div class="main">
+			<div id="follower"></div>
+
+			<!-- Responsive Navbar ------------------------------------------>
+
+			<div class="navBar">
+				<div class="navBtn_close" id="navClose" onclick="resClose()">Close <i class="fa-solid fa-xmark"></i></div>
+				<nav>
+					<li><a href="#home_page" onclick="resClose()">Home</a></li>
+					<li><a href="#service_page" onclick="resClose()">Service</a></li>
+					<li><a href="#skill_page" onclick="resClose()">Skill</a></li>
+					<li><a href="#work_page" onclick="resClose()">Work</a></li>
+					<li><a href="#pricing_page" onclick="resClose()">Pricing</a></li>
+					<li><a href="#contact_page" onclick="resClose()">Contact</a></li>
+				</nav>
+			</div>
+
+			
+
+			<!-- Banner Section ---------------------------------------------->
+
+			<section class="home_page" id="home_page">
+				<div class="header">
+					<div class="logo" data-aos="fade-right">Port<span>Folio</span></div>
+					<div class="nav_btn" id="navOpen" onclick="resOpen()" data-aos="fade-left">
+						<div class="line line-upper"></div>
+						<div class="line line-middle"></div>
+						<div class="line line-lower"></div>
+					</div>
+				</div>
+
+				<div class="banner_content">
+					<div class="main_content" data-aos="fade-right">
+						<div class="content_head">
+							<p>hello, <span class="head_span_first">my name is</span></p>
+							<h1>dheeraj<br><span>kumar yadav</span></h1>
+							<p>i am <span class="head_span_second">web designer</span></p>
+						</div>
+						<div class="content_para">
+							<p>From Delhi, India. I have rich experience in web design and I'm very passionate and dedicated to my work. I love to talk with you about our unique.</p>
+						</div>
+						<div class="content_btn"><a href="#">Download CV</a></div>
+					</div>
+				</div>
+
+				<div class="banner_img" data-aos="fade-left">
+					<img src="img/profile-pic.png" class="banner_profile_img" alt="">
+					<img src="img/banner_icons/dot_icon.png" class="dot_icon" alt="">
+					<div class="anim_icons">
+						<img src="img/banner_icons/html_icon.avif" class="html_icon" alt="">
+						<img src="img/banner_icons/css_icon.avif" class="css_icon" alt="">
+						<img src="img/banner_icons/js_icon.webp" class="js_icon" alt="">
+					</div>
+				</div>
+
+				<div class="line_element right_line_element" data-aos="fade-up"></div>
+			</section>
+
+			
+			
+
+			<!-- Service Section Start ------------------------------------------>
+
+			<section class="service_page" id="service_page">
+				<div class="service_head section_head">
+					<h2 data-aos="fade-down">what i do</h2>
+					<p data-aos="fade-right">my <span>services</span></p>
+				</div>
+				<div class="service_card_container">
+					<div class="service_card" data-tilt data-tilt-scale="1.06" data-aos="zoom-in">
+						<span class="card_head">web development</span>
+						<div class="card_content">
+							<h2>web designing & poster designing</h2>
+							<p>As a web designer, I use my creativity and technical skills to design and build websites that are not only visually appealing but also highly functional and user-friendly.</p>
+						</div>
+						<a href="#" class="pricing_btn">see pricing <i class="fa-solid fa-arrow-right"></i></a>
+
+						<img src="img/banner_icons/dot_icon.png" class="dot_icon" alt="">
+					</div>
+				</div>
+				<div class="line_element left_line_element" data-aos="fade-down"></div>
+			</section>
+
+
+
+
+
+			<!-- Skills Section Start ------------------------------------->
+
+			<section class="skill_page" id="skill_page">
+				<div class="skill_head section_head">
+					<h2 data-aos="fade-down">professional skills</h2>
+					<p data-aos="fade-right">my <span>talent</span></p>
+				</div>
+
+				<div class="skill_card_container">
+					<div class="skill_card">
+						<div class="skill_name">
+							<h2>HTML</h2>
+							<div class="skill_value">86<span>%</span></div>
+						</div>
+						<div class="skill_text">
+							<p>Using HTML, I can build the structure of your web pages, including headings, paragraphs, images, links, and forms.</p>
+						</div>
+						<div class="skill_progress_bar html_bar"></div>
+					</div>
+
+					<div class="skill_card">
+						<div class="skill_name">
+							<h2>CSS</h2>
+							<div class="skill_value">90<span>%</span></div>
+						</div>
+						<div class="skill_text">
+							<p>Using CSS, I can customize the look and feel of your web pages, including the fonts, colors, layout, and visual elements.</p>
+						</div>
+						<div class="skill_progress_bar css_bar"></div>
+					</div>
+
+					<div class="skill_card">
+						<div class="skill_name">
+							<h2>JavaScript</h2>
+							<div class="skill_value">70<span>%</span></div>
+						</div>
+						<div class="skill_text">
+							<p>With my JavaScript knowledge, I can help you create a dynamic and interactive website that engages your visitors and enhances their user experience.</p>
+						</div>
+						<div class="skill_progress_bar script_bar"></div>
+					</div>
+				</div>
+				<div class="line_element right_line_element" data-aos="fade-up"></div>
+			</section>
+
+			
+
+
+			<!-- Work Section Start ---------------------------------->
+
+			<section class="work_page" id="work_page">
+				<div class="work_head section_head">
+					<h2 data-aos="fade-down">portfolio</h2>
+					<p data-aos="fade-right">my <span>works</span></p>
+				</div>
+
+				<div class="work-filter">
+					<ul>
+						<li class="active" data-filter="all">All</li>
+						<li data-filter="web-design">Web Design</li>
+						<li data-filter="graphic-design">Graphic Design</li>
+					</ul>
+				</div>
+
+				<div class="work-gallery">
+					<div class="work-item web-design">
+						<div class="work_card_img">
+							<img src="img/work_img/webWork1.jpg" alt="Web Design 1">
+						</div>
+						<div class="work_card_content">
+							<h2><span>web design</span><br>work name</h2>
+							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<div class="work-item graphic-design">
+						<div class="work_card_img">
+							<img src="img/work_img/graphic-work1.jpg" alt="Graphic Design 1">
+						</div>
+						<div class="work_card_content">
+							<h2><span>web design</span><br>work name</h2>
+							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<div class="work-item graphic-design">
+						<div class="work_card_img">
+							<img src="img/work_img/graphic-work2.jpg" alt="Web Design 2">
+						</div>
+						<div class="work_card_content">
+							<h2><span>web design</span><br>work name</h2>
+							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<div class="work-item graphic-design">
+						<div class="work_card_img">
+							<img src="img/work_img/graphic-work3.jpg" alt="Graphic Design 2">
+						</div>
+						<div class="work_card_content">
+							<h2><span>web design</span><br>work name</h2>
+							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<div class="work-item graphic-design">
+						<div class="work_card_img">
+							<img src="img/work_img/graphic-work4.jpg" alt="Graphic Design 2">
+						</div>
+						<div class="work_card_content">
+							<h2><span>web design</span><br>work name</h2>
+							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<div class="work-item web-design">
+						<div class="work_card_img">
+							<img src="img/work_img/webWork2.png" alt="Web Design 1">
+						</div>
+						<div class="work_card_content">
+							<h2><span>web design</span><br>work name</h2>
+							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="line_element left_line_element" data-aos="fade-down"></div>
+			</section>
+
+
+			
+
+			<!-- Pricing Section Start ---------------------------------->
+
+			<section class="pricing_page" id="pricing_page">
+				<div class="pricing_head section_head">
+					<h2 data-aos="fade-down">pricing</h2>
+					<p data-aos="fade-right">my <span>price board</span></p>
+				</div>
+
+				<div class="pricing_card_container">
+					<div class="pricing_card" data-tilt data-tilt-scale="1.06" data-aos="fade-up">
+						<span class="work_type_name">hourley basis</span>
+						<div class="pricing_value">
+							<h2>5<span>$</span></h2><p class="work_type">Hour</p>
+						</div>
+						<p class="pricing_desc">As a web designer, I take pride in my ability to create visually stunning and functional websites that meet the needs of my clients.</p>
+						<div class="work_offer">
+							<ul>
+								<li>Web Designing</li>
+								<li>Poster Designing</li>
+							</ul>
+						</div>
+						<a href="#" class="pricing_btn">start project <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+
+
+					<div class="pricing_card middle_pricing_card" data-tilt data-tilt-scale="1.06" data-aos="fade-up">
+						<span class="work_type_name">freelancing</span>
+						<div class="pricing_value">
+							<h2>100<span>$</span></h2><p class="work_type">Week</p>
+						</div>
+						<p class="pricing_desc">With a keen eye for design and attention to detail, I strive to deliver websites that exceed my clients' expectations.</p>
+						<div class="work_offer">
+							<ul>
+								<li>Web Designing</li>
+								<li>Poster Designing</li>
+							</ul>
+						</div>
+						<a href="#" class="pricing_btn">start project <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+
+
+					<div class="pricing_card" data-tilt data-tilt-scale="1.06" data-aos="fade-up">
+						<span class="work_type_name">full time</span>
+						<div class="pricing_value">
+							<h2>250<span>$</span></h2><p class="work_type">Month</p>
+						</div>
+						<p class="pricing_desc">Contact me today to discuss your web design needs and let's work together to bring your vision to life!</p>
+						<div class="work_offer">
+							<ul>
+								<li>Web Designing</li>
+								<li>Poster Designing</li>
+							</ul>
+						</div>
+						<a href="#" class="pricing_btn">start project <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="line_element right_line_element" data-aos="fade-up"></div>
+			</section>
+
+
+
+
+			<!-- Contact Section Start ---------------------------------->
+
+			<section class="contact_page" id="contact_page">
+				<div class="skill_head section_head">
+					<h2 data-aos="fade-down">contact me</h2>
+					<p data-aos="fade-right">let's <span>talk</span></p>
+				</div>
+
+				<div class="contact_container">
+					<div class="contact_info_area">
+						<div class="contact_info_content">
+							<div class="contact_icon"><i class="fa-solid fa-map-location-dot"></i></div>
+							<div class="contact_info">
+								<p><span>Address</span><br>khanpur, new delhi, india</p>
+							</div>
+						</div>
+
+						<div class="contact_info_content">
+							<div class="contact_icon"><i class="fa-solid fa-user-tie"></i></div>
+							<div class="contact_info">
+								<p><span>Freelance</span><br>will be available soon</p>
+							</div>
+						</div>
+
+						<div class="contact_info_content">
+							<div class="contact_icon"><i class="fa-solid fa-envelope"></i></div>
+							<div class="contact_info">
+								<p><span>Email</span><br>dheerajwebdev8178@gmail.com</p>
+							</div>
+						</div>
+
+						<div class="contact_info_content">
+							<div class="contact_icon"><i class="fa-solid fa-phone-volume"></i></div>
+							<div class="contact_info">
+								<p><span>Phone</span><br>+91-817-808-3167</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="contact_message_area">
+						<div class="message_input_container">
+							<div class="input_box_main">
+								<div class="input_box">
+									<p>your full name</p>
+									 <input type="text" id="recipient">
+								</div>
+
+								<div class="input_box">
+									<p>your email address</p>
+									<input type="email" id="email" name="email" required>
+								</div>
+							</div>
+
+							<div class="input_box">
+								<p>your subject</p>
+								<input type="text" id="subject">
+							</div>
+
+							<div class="input_box">
+								<p>your message</p>
+								<textarea id="message" name="message" rows="5" required></textarea>
+							</div>
+						</div>
+						<a href="#" class="send_btn" onclick="sendEmail()">send message</a>
+					</div>
+				</div>
+				<div class="line_element left_line_element" data-aos="fade-down"></div>
+			</section>
+
+		</div>
+	</div>
+
+
+
+
+
+
+<!-- Vanilla Tilt JS -->
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".service_card"), {
+		max: 10,
+		speed: 1000
+	});
+
+
+// --------- Filter Work Content ------------------
+	const filterItems = document.querySelectorAll('.work-filter li');
+	const galleryItems = document.querySelectorAll('.work-gallery .work-item');
+
+	filterItems.forEach(filterItem => {
+	  filterItem.addEventListener('click', () => {
+	    filterItems.forEach(item => item.classList.remove('active'));
+	    filterItem.classList.add('active');
+
+	    const filterValue = filterItem.getAttribute('data-filter');
+
+	    galleryItems.forEach(galleryItem => {
+	      if (filterValue === 'all' || galleryItem.classList.contains(filterValue)) {
+	        galleryItem.style.animation = 'show 0.5s forwards';
+	        galleryItem.style.display = 'block';
+	      } else {
+	        galleryItem.style.animation = 'hide 0.5s forwards';
+	        galleryItem.style.display = 'none';
+	      }
+	    });
+	  });
+	});
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init
+  ({
+  	duration: 1400,
+  	delay: 200,
+  });
+</script>
+
+</body>
+</html>
