@@ -30,7 +30,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.babel.min.js" integrity="sha512-pN0rCYHGZjfGs3iKHAxWykf8jcueAPyjCgWQRT2n9EOfAKCsKS5rqPHLM4GqqI8Q1JQxQfkeeslsULidJbBk/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
-<body onload="moveTitle()">
+<body>
 
 	<div class="container">
 		<div class="main">
@@ -190,10 +190,10 @@
 							<img src="img/work_img/webWork1.jpg" alt="Web Design 1">
 						</div>
 						<div class="work_card_content">
-							<h2><span>web design</span><br>work name</h2>
+							<h2><span>web design</span><br>pizza website template</h2>
 							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+							<a href="img/work_img/webWork1.jpg" target="_blank" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -202,10 +202,10 @@
 							<img src="img/work_img/graphic-work1.jpg" alt="Graphic Design 1">
 						</div>
 						<div class="work_card_content">
-							<h2><span>web design</span><br>work name</h2>
+							<h2><span>Poster Designing</span><br>typography poster</h2>
 							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+							<a href="img/work_img/graphic-work1.jpg" target="_blank" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -214,10 +214,10 @@
 							<img src="img/work_img/graphic-work2.jpg" alt="Web Design 2">
 						</div>
 						<div class="work_card_content">
-							<h2><span>web design</span><br>work name</h2>
+							<h2><span>Poster Designing</span><br>shoe poster design</h2>
 							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+							<a href="img/work_img/graphic-work2.jpg" target="_blank" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -226,10 +226,10 @@
 							<img src="img/work_img/graphic-work3.jpg" alt="Graphic Design 2">
 						</div>
 						<div class="work_card_content">
-							<h2><span>web design</span><br>work name</h2>
+							<h2><span>Poster Designing</span><br>burger poster design</h2>
 							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+							<a href="img/work_img/graphic-work3.jpg" target="_blank" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -238,10 +238,10 @@
 							<img src="img/work_img/graphic-work4.jpg" alt="Graphic Design 2">
 						</div>
 						<div class="work_card_content">
-							<h2><span>web design</span><br>work name</h2>
+							<h2><span>Poster Designing</span><br>fitness youtube thumbnail</h2>
 							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+							<a href="img/work_img/graphic-work4.jpg" target="_blank" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -250,10 +250,10 @@
 							<img src="img/work_img/webWork2.png" alt="Web Design 1">
 						</div>
 						<div class="work_card_content">
-							<h2><span>web design</span><br>work name</h2>
+							<h2><span>web design</span><br>Christmas Greeting card</h2>
 							<p class="work_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="#" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
+							<a href="https://christmas-greeting-card.netlify.app/" target="_blank" class="project_btn">see project <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -365,30 +365,30 @@
 					</div>
 
 					<div class="contact_message_area">
-						<div class="message_input_container">
+						<form class="message_input_container">
 							<div class="input_box_main">
 								<div class="input_box">
 									<p>your full name</p>
-									 <input type="text" id="recipient">
+									 <input type="text" id="name" name="name">
 								</div>
 
 								<div class="input_box">
 									<p>your email address</p>
-									<input type="email" id="email" name="email" required>
+									<input type="text" id="email" name="email">
 								</div>
 							</div>
 
 							<div class="input_box">
 								<p>your subject</p>
-								<input type="text" id="subject">
+								<input type="text" id="subject" name="subject">
 							</div>
 
 							<div class="input_box">
 								<p>your message</p>
 								<textarea id="message" name="message" rows="5" required></textarea>
 							</div>
-						</div>
-						<a href="#" class="send_btn" onclick="sendEmail()">send message</a>
+						</form>
+						<a href="#" class="send_btn" onclick="sendMessage()">send message</a>
 					</div>
 				</div>
 				<div class="line_element left_line_element" data-aos="fade-down"></div>
@@ -396,8 +396,6 @@
 
 		</div>
 	</div>
-
-
 
 
 
@@ -432,8 +430,8 @@
 	    });
 	  });
 	});
-
 </script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init
@@ -441,6 +439,27 @@
   	duration: 1400,
   	delay: 200,
   });
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script type="text/javascript">
+	function sendMessage() {
+
+		Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "dheerajwebdev8178@gmail.com",
+    Password : "55C300AD3771A15D440C97C96C06930E5FB8",
+    To : "dheerajwebdev8178@gmail.com",
+    From : "dheerajwebdev8178@gmail.com",
+    ReplyFrom : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "Name: " + document.getElementById("name").value + "<br>" + "From: " + document.getElementById("email").value + "<br>" + "Subject: "+ document.getElementById('subject').value + "<br>" + "Message: " + document.getElementById('message').value,
+}).then(
+  message => alert(message)
+);
+	}
 </script>
 
 </body>
