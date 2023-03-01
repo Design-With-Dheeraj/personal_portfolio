@@ -566,3 +566,43 @@
 		font-size: 14px;
 	}
 }
+
+
+
+@media(max-width: 1200px)
+{
+	.send_img_area .send_img
+	{
+		width: 300px;
+		height: auto;
+	}
+
+	.send_card .send_text_area
+	{
+		width: 50%;
+	}
+
+}
+
+@media(max-width: 1024px)
+{
+	.message_sent_popup .send_card
+	{
+		width: 80%;
+	}
+
+}
+
+@media(max-width: 768px)
+{
+	.message_sent_popup .send_card
+	{
+		width: 90%;
+		flex-direction: column;
+	}
+
+	.send_card .send_text_area
+	{
+		width: 100%;
+	}
+}
