@@ -365,34 +365,65 @@
 					</div>
 
 					<div class="contact_message_area">
-						<form class="message_input_container">
+						<form class="message_input_container" id="message_input_container">
 							<div class="input_box_main">
 								<div class="input_box">
 									<p>your full name</p>
-									 <input type="text" id="name" name="name">
+									<div class="input_box_inner">
+										<i class="fa-solid fa-circle-check" id="nameCheck"></i>	
+										<input type="text" id="contact_name" name="name" onkeyup="name_error()">
+									</div>
+									<span id="name_error" class="error_msg"></span>
 								</div>
 
 								<div class="input_box">
 									<p>your email address</p>
-									<input type="text" id="email" name="email">
+									<div class="input_box_inner">
+										<i class="fa-solid fa-circle-check" id="emailCheck"></i>
+										<input type="text" id="contact_email" name="email" onkeyup="email_error()">
+									</div>
+									<span id="email_error" class="error_msg"></span>
 								</div>
 							</div>
 
 							<div class="input_box">
 								<p>your subject</p>
-								<input type="text" id="subject" name="subject">
+								<div class="input_box_inner">
+									<i class="fa-solid fa-circle-check" id="subjectCheck"></i>
+									<input type="text" id="contact_subject" name="subject" onkeyup="subject_error()">
+								</div>
+								<span id="subject_error" class="error_msg"></span>
 							</div>
 
 							<div class="input_box">
 								<p>your message</p>
-								<textarea id="message" name="message" rows="5" required></textarea>
+								<div class="input_box_inner">
+									<i class="fa-solid fa-circle-check" id="messageCheck"></i>
+									<textarea id="contact_message" name="message" rows="5" onkeyup="message_error()"></textarea>
+								</div>
+								<span id="message_error" class="error_msg"></span>
 							</div>
 						</form>
-						<a href="#" class="send_btn" onclick="sendMessage()">send message</a>
+						<button class="send_btn" onclick="sendMessage()">send message</button>
 					</div>
 				</div>
 				<div class="line_element left_line_element" data-aos="fade-down"></div>
 			</section>
+
+			<div class="message_sent_popup" id="message_sent_popup">
+				<div class="send_card">
+					<div class="send_img_area">
+						<img src="img/sended_img.webp" class="send_img">
+					</div>
+
+					<div class="send_text_area">
+						<h2>your message was successfully sent</h2>
+						<p>You will not have to wait too much, for my reply. Thank you</p>
+						<button class="send_popup_close" onclick="popup_close()">OK</button>
+					</div>
+				</div>
+				<div class="fade"></div>
+			</div>
 
 		</div>
 	</div>
@@ -400,68 +431,199 @@
 
 
 
-<!-- Vanilla Tilt JS -->
-<script type="text/javascript">
-	VanillaTilt.init(document.querySelector(".service_card"), {
-		max: 10,
-		speed: 1000
-	});
+	<!-- Vanilla Tilt JS -->
+	<script type="text/javascript">
+		VanillaTilt.init(document.querySelector(".service_card"), {
+			max: 10,
+			speed: 1000
+		});
 
 
 // --------- Filter Work Content ------------------
-	const filterItems = document.querySelectorAll('.work-filter li');
-	const galleryItems = document.querySelectorAll('.work-gallery .work-item');
+		const filterItems = document.querySelectorAll('.work-filter li');
+		const galleryItems = document.querySelectorAll('.work-gallery .work-item');
 
-	filterItems.forEach(filterItem => {
-	  filterItem.addEventListener('click', () => {
-	    filterItems.forEach(item => item.classList.remove('active'));
-	    filterItem.classList.add('active');
+		filterItems.forEach(filterItem => {
+			filterItem.addEventListener('click', () => {
+				filterItems.forEach(item => item.classList.remove('active'));
+				filterItem.classList.add('active');
 
-	    const filterValue = filterItem.getAttribute('data-filter');
+				const filterValue = filterItem.getAttribute('data-filter');
 
-	    galleryItems.forEach(galleryItem => {
-	      if (filterValue === 'all' || galleryItem.classList.contains(filterValue)) {
-	        galleryItem.style.animation = 'show 0.5s forwards';
-	        galleryItem.style.display = 'block';
-	      } else {
-	        galleryItem.style.animation = 'hide 0.5s forwards';
-	        galleryItem.style.display = 'none';
-	      }
-	    });
-	  });
-	});
-</script>
+				galleryItems.forEach(galleryItem => {
+					if (filterValue === 'all' || galleryItem.classList.contains(filterValue)) {
+						galleryItem.style.animation = 'show 0.5s forwards';
+						galleryItem.style.display = 'block';
+					} else {
+						galleryItem.style.animation = 'hide 0.5s forwards';
+						galleryItem.style.display = 'none';
+					}
+				});
+			});
+		});
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init
-  ({
-  	duration: 1400,
-  	delay: 200,
-  });
-</script>
+	</script>
 
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+// Animate On Scroll Code -------------------------->
+		AOS.init
+		({
+			duration: 1400,
+			delay: 200,
+		});
+	</script>
 
-<script type="text/javascript">
-	function sendMessage() {
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
-		Email.send({
-	SecureToken : "b7052824-b1e9-4212-837f-5ea49134b8b4",
-    Host : "smtp.elasticemail.com",
-    Username : "dheerajwebdev8178@gmail.com",
-    Password : "55C300AD3771A15D440C97C96C06930E5FB8",
-    To : "dheerajwebdev8178@gmail.com",
-    From : "dheerajwebdev8178@gmail.com",
-    ReplyFrom : document.getElementById("email").value,
-    Subject : "This is the subject",
-    Body : "Name: " + document.getElementById("name").value + "<br>" + "From: " + document.getElementById("email").value + "<br>" + "Subject: "+ document.getElementById('subject').value + "<br>" + "Message: " + document.getElementById('message').value,
-}).then(
-  message => alert(message)
-);
-	}
-</script>
+
+
+	<script type="text/javascript">
+
+		let nameError = document.getElementById("name_error");
+		let emailError = document.getElementById("email_error");
+		let subjectError = document.getElementById("subject_error");
+		let messageError = document.getElementById('message_error');
+		let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+		function sendMessage() {
+
+			let contactName = document.getElementById('contact_name').value;
+			let contactEmail = document.getElementById('contact_email').value;
+			let contactSubject = document.getElementById('contact_subject').value;
+			let contactMessage = document.getElementById('contact_message').value;
+
+			if (contactName.length == 0) 
+			{
+				nameError.innerHTML = "This Field Is Required"
+			}
+
+			else if (contactEmail.length == 0) 
+			{
+				emailError.innerHTML = "This Field Is Required"
+			}
+
+			else if (contactSubject.length == 0) 
+			{
+				subjectError.innerHTML = "This Field Is Required"
+			}
+
+			else if (contactMessage.length == 0) 
+			{
+				messageError.innerHTML = "This Field Is Required"
+			}
+
+			else
+			{
+				Email.send({
+					SecureToken : "b7052824-b1e9-4212-837f-5ea49134b8b4",
+					Host : "smtp.elasticemail.com",
+					Username : "dheerajwebdev8178@gmail.com",
+					Password : "55C300AD3771A15D440C97C96C06930E5FB8",
+					To : "dheerajwebdev8178@gmail.com",
+					From : "dheerajwebdev8178@gmail.com",
+					ReplyFrom : document.getElementById("contact_email").value,
+					Subject : "This is the subject",
+					Body : "Name: " + document.getElementById("contact_name").value + "<br>" + "From: " + document.getElementById("contact_email").value + "<br>" + "Subject: "+ document.getElementById('contact_subject').value + "<br>" + "Message: " + document.getElementById('contact_message').value,
+				}).then(
+					document.querySelector('.send_card').classList.add('popupOpen'),
+					document.getElementById('message_sent_popup').style.display = "block",
+					document.querySelector('.fade').style.display = "block",
+				);
+				document.getElementById("message_input_container").reset();
+				document.getElementById('nameCheck').style.display = "none"
+				document.getElementById('emailCheck').style.display = "none"
+				document.getElementById('subjectCheck').style.display = "none";
+				document.getElementById('messageCheck').style.display = "none";
+			}
+		}
+
+		function popup_close() {
+			document.querySelector('.send_card').classList.remove('popupOpen');
+			document.querySelector('.fade').style.display = "none";
+		}
+
+
+		function name_error() {
+			let name = document.getElementById('contact_name').value;
+			if (name.length == 0) 
+			{
+				nameError.innerHTML = "Name Is Required"
+				document.getElementById('nameCheck').style.display = "none"
+				nameError.style.display = "block"
+				return false;
+			}
+
+			if (name.length < 3 || name.length > 20)
+			{
+				nameError.innerHTML = "Name should be between 3 to 20 characters"
+				document.getElementById('nameCheck').style.display = "none"
+				nameError.style.display = "block"
+				return false;
+			}
+
+			document.getElementById('nameCheck').style.display = "block"
+			nameError.style.display = "none"
+			return true;
+
+		}
+
+		function email_error() {
+			let email = document.getElementById('contact_email').value;
+			if (email.length == 0) 
+			{
+				emailError.innerHTML = "Email Is Required"
+				document.getElementById('emailCheck').style.display = "none"
+				emailError.style.display = "block"
+				return false;
+			}
+
+			if (!email.match(validEmail))
+			{
+				emailError.innerHTML = "Type Valid Email"
+				document.getElementById('emailCheck').style.display = "none"
+				emailError.style.display = "block"
+				return false;
+			}
+
+			document.getElementById('emailCheck').style.display = "block"
+			emailError.style.display = "none"
+			return true;
+		}
+
+		function subject_error() {
+			let subject = document.getElementById('contact_subject').value;
+			let subject_required = 30;
+			let subject_left = subject_required - subject.length;
+
+			if (subject_left > 0) 
+			{
+				subjectError.innerHTML = (subject_left + " more characters required");
+				return false;
+			}
+
+			document.getElementById('subjectCheck').style.display = "block";
+			subjectError.style.display = "none"
+			return true;
+		}
+
+		function message_error() {
+			let message = document.getElementById('contact_message').value;
+			let message_required = 100;
+			let message_left = message_required - message.length;
+
+			if (message_left > 0) 
+			{
+				messageError.innerHTML = message_left + " more characters required";
+				return false;
+			}
+
+			document.getElementById('messageCheck').style.display = "block";
+			messageError.style.display = "none"
+			return true;
+		}
+
+	</script>
 
 </body>
 </html>
