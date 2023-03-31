@@ -51,7 +51,6 @@ body
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	transition: 0.5s;
 	padding: 20px 40px;
 	transition: 0.5s;
 	margin: 0 auto;
@@ -1015,6 +1014,85 @@ transform: skew(0deg) scale(1.0);
 }
 
 
+.work_page .work_sec_btn a
+{
+	margin: 0 auto;
+	display: block;
+	width: 160px;
+	padding: 10px 0;
+	font-family: var(--normalFont);
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: #000;
+	text-decoration: none;
+	border: 3px solid #000;
+	border-radius: 35px;
+	position: relative;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+.work_page .work_sec_btn a:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 35px;
+	background-color: var(--themeDark);
+	opacity: 0;
+	z-index: -1;
+	transform: scale(0.1);
+	transition: 0.5s;
+	filter: blur(10px);
+}
+
+.work_sec_btn a:hover:before
+{
+	opacity: 0.6;
+	transform: scale(1.0);
+	filter: blur(0);
+}
+
+.work_sec_btn a:hover
+{
+	color: #fff;
+}
+
+.work_page .work_sec_btn a i
+{
+	margin-left: 10px;
+	color: var(--themeDark);
+	animation: arrowMove 2s infinite ease-in-out;
+	transition: 0.5s;
+}
+
+.work_sec_btn a:hover i
+{
+	color: #000;
+}
+
+@keyframes arrowMove
+{
+	0%
+	{
+		transform: translateX(0);
+	}
+
+	50%
+	{
+		transform: translateX(10px);
+	}
+
+	100%
+	{
+		transform: translateX(0px);
+	}
+}
+
 
 
 
@@ -1396,12 +1474,12 @@ transform: skew(0deg) scale(1.0);
 
 
 
-
+/* Message Send Popup Design -------------------------- */
 
 .message_sent_popup .send_card
 {
 	position: fixed;
-	top: -100%;
+	top: -10%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0.2);
 	width: 60%;
