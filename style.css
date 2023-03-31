@@ -1401,7 +1401,7 @@ transform: skew(0deg) scale(1.0);
 .message_sent_popup .send_card
 {
 	position: fixed;
-	top: -10%;
+	top: -100%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0.2);
 	width: 60%;
