@@ -1211,6 +1211,8 @@ transform: skew(0deg) scale(1.0);
 	margin-top: 40px;
 	outline: 2px solid #000;
 	outline-offset: 4px;
+	-webkit-outline: 2px solid #000;
+	-webkit-outline-offset: 4px;
 }
 
 .pricing_card_container .middle_pricing_card
