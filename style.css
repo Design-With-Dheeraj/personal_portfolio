@@ -1207,6 +1207,7 @@ transform: skew(0deg) scale(1.0);
 	background-color: var(--themeDark);
 	color: #fff;
 	border-radius: 35px;
+	-webkit-border-radius: 35px;
 	text-decoration: none;
 	margin-top: 40px;
 	outline: 2px solid #000;
