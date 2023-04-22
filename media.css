@@ -450,7 +450,14 @@
 	.work-item .work_card_img
 	{
 		background: none;
-	}	
+	}
+	
+	.work_page .work_sec_btn a
+	{
+		width: 160px;
+		font-size: 14px;
+		border: 2px solid #000;
+	}
 }
 
 
