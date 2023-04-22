@@ -533,6 +533,29 @@
 	}
 }
 
+
+
+@media(max-width: 560px)
+{
+	.input_box .error_msg
+	{
+		font-size: 12px;
+	}
+
+	.input_box_inner i
+	{
+		font-size: 16px;
+	}
+
+	.input_box .input_box_inner input, textarea
+	{
+		padding: 0 30px 0 10px;
+		font-size: 14px;
+	}
+}
+
+
+
 @media(max-width: 425px)
 {
 	.contact_info_content .contact_icon
