@@ -1440,6 +1440,7 @@ transform: skew(0deg) scale(1.0);
 	z-index: 1;
 	transition: 0.5s;
 	margin-top: 30px;
+	box-shadow: 4px 4px 1px rgba(35, 35, 35, 0.6);
 }
 
 .contact_message_area .send_btn:after
