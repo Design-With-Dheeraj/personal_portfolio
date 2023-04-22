@@ -1411,9 +1411,6 @@ transform: skew(0deg) scale(1.0);
 
 .input_box .error_msg
 {
-	position: absolute;
-	left: 0;
-	bottom: -22px;
 	font-family: var(--normalFont);
 	font-size: 12px;
 	font-weight: 500;
